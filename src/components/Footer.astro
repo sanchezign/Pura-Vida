@@ -1,0 +1,56 @@
+---
+import { socialIcons, links } from "../mocks/footerData";
+import Monstera from "/src/assets/vectors/Monstera 1.svg"
+import Fern from "/src/assets/vectors/fern-part.svg"
+---
+
+<footer
+  id="contact"
+  class="px-8 py-[74px] bg-primary flex flex-col justify-center items-center gap-6 relative overflow-hidden"
+>
+  <h2
+    class="text-center text-white text-2xl font-extrabold font-['Manrope'] leading-[44.80px]"
+  >
+    Contáctanos
+  </h2>
+
+  <!-- Íconos de redes sociales -->
+  <div class="flex justify-center items-center gap-6 cursor-pointer">
+    {
+      socialIcons.map((icon) => (
+        <div class="w-[57px] h-[57px] rounded-full border border-white flex justify-center items-center transition duration-300 hover:bg-secondary">
+          <icon.component />
+        </div>
+      ))
+    }
+  </div>
+
+  <!-- Links -->
+  <div class="flex justify-center items-center gap-8">
+    {
+      links.map((link) => (
+        <a
+          href={link.href}
+          class="text-white text-base font-bold font-['Manrope'] capitalize hover:text-secondary hover:border-b-2 hover:border-secondary transition duration-300"
+        >
+          {link.text}
+        </a>
+      ))
+    }
+  </div>
+  <img
+    src={Monstera.src}
+    alt="monstera"
+    class="absolute -z-1 w-[312px] mr-auto ml-auto xxl:-ml-[1550px] xxl:mt-[50px] xlg:-ml-[1050px] xlg:bottom-0
+         bottom-0 opacity-40 xxl:opacity-80 xlg:opacity-80"
+  />
+  <img
+    src={Fern.src}
+    alt="fern"
+    class="absolute -z-1 w-[312px] opacity-40 mt-[40px] -ml-[75px]
+    hidden xxl:block xlg:block
+    xxl:ml-[1550px] xxl:bottom-0
+    xlg:ml-[1050px] xlg:bottom-0
+    xxl:opacity-80 xlg:opacity-80"
+  />
+</footer>

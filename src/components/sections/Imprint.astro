@@ -1,0 +1,70 @@
+---
+import TextCard from "../textCard.astro";
+import { textCards } from "../../mocks/textData";
+
+import bannerMobile from "../../assets/Mobile-img/banner-mobile.png";
+import bannerDesktop from "../../assets/Desktop-img/banner-DESKTOP.jpg";
+
+import Monstera from "../../assets/vectors/monstera-white.svg";
+import Fern from "../../assets/vectors/fern-white.svg";
+import Green from "../../assets/vectors/Vector-green.svg";
+---
+
+<!-- seccion principar de impronta -->
+<section
+    id="imprint"
+    class="grid grid-cols-1 px-5 py-10 text-center xxl:grid-cols-2 gap-[30px] bg-primary xxl:px-[140px] xxl:py-20 xxl:text-start
+    xlg:grid-cols-2 xlg:px-[80px] xlg:py-14 xlg:text-start relative overflow-hidden"
+>
+    <h1
+        class="col-span-full self-stretch text-white text-[64px] font-normal font-bebas tracking-[10.24px]
+       xxl:text-8xl xxl:tracking-[15.36px] xlg:text-6xl xlg:tracking-[12.36px]"
+    >
+        IMPRONTA
+    </h1>
+
+    {textCards.slice(0, 2).map((card) => <TextCard {...card} />)}
+    <img src={Fern.src} class="absolute -z-1 w-[498px] mx-auto mt-[210px] ml-[1100px]"/>
+</section>
+
+<!-- banner separacion -->
+<div>
+    <picture>
+        <source srcset={bannerMobile.src} media="(max-width: 500px)" />
+        <source srcset={bannerDesktop.src} media="(min-width: 501px)" />
+        <img src={bannerDesktop.src} class="w-full h-[400px]" alt="Banner" />
+    </picture>
+</div>
+
+<!-- Estacionalidad/incidencia -->
+<section
+    class="grid grid-cols-1 px-5 py-10 text-center
+    xlg:text-start xlg:grid-cols-2 xlg:px-[80px]
+    xxl:text-start xxl:grid-cols-2 xxl:px-[140px] gap-[30px] relative overflow-hidden"
+>
+    {
+        textCards.slice(2, 4).map((card) => (
+            <div class="flex flex-col">
+                <TextCard {...card} />
+            </div>
+        ))
+    } 
+    <img src={Green.src} class="absolute hidden xlg:block xxl:block  -z-1 w-[350px] bottom-0 xxl:ml-[300px] xlg:ml-[150px]"/>
+</section>
+
+<!-- vanguardia/Biodiversidad -->
+<section
+    class="grid grid-cols-1 px-5 py-10 text-center xxl:grid-cols-2 xxl:px-[140px] gap-[30px] bg-primary
+    xlg:grid-cols-2 xlg:px-[100px] relative overflow-hidden"
+>
+    {
+        textCards.slice(4).map((card) => (
+            <div class="flex flex-col xxl:text-start xlg:text-start gap-8">
+                <TextCard {...card} />
+            </div>
+        ))
+    }
+    <img src={Monstera.src} class="absolute -z-1 w-[524px] -ml-[200px]"/>
+</section>
+
+<div class="bg-white py-[30px]"></div>
