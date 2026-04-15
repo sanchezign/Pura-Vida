@@ -40,7 +40,7 @@ const textCards = [
     },
     {
         title: "BIODIVERSIDAD",
-        text: "Prestamos especial atención a reducir la posibilidad de infección de cada una de las especies. En VERBENAS realizamos fumigaciones preventivas y de mantenimiento. Usamos productos de primera calidad para obtener los mejores resultados sanitarios para tus plantas y jardines.",
+        text: "Prestamos especial atención a reducir la posibilidad de infección de cada una de las especies. En Pura Vida realizamos fumigaciones preventivas y de mantenimiento. Usamos productos de primera calidad para obtener los mejores resultados sanitarios para tus plantas y jardines.",
         titleStyles: "text-secondary",
         textStyles: "text-white",
         titleSize: "text-2xl",
