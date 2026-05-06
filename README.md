@@ -11,3 +11,12 @@ Este es un proyecto desarrollado utilizando **Astro** como framework principal, 
 - **Swiper**: Librería para crear carruseles fluidos y personalizables.
 
 
+## 📸 Vista previa
+
+<p align="center">
+  <img src="src/assets/Desktop-img/puravida.png" alt="Home de la aplicación" width="900"/>
+</p>
+
+<p align="center">
+  Interfaz principal de la aplicación
+</p>
